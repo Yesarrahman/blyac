@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MapPin } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,9 +60,11 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center transition-transform group-hover:scale-105">
-                <span className="text-primary-foreground font-display text-xl font-bold">BL</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="BetterLife Yoga & Aerobics Center Logo" 
+                className="w-12 h-12 rounded-full transition-transform group-hover:scale-105"
+              />
               <div className="hidden sm:block">
                 <h1 className="font-display text-xl font-semibold text-foreground leading-tight">
                   BetterLife
